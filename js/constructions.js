@@ -34,24 +34,24 @@ export function populateRecipeList(recipes) {
 
 export function createRecipeDetails(recipe) {
     return `
-    <img src=${meal.strMealThumb}>
+    <img src=${recipe.strMealThumb}>
     <div class="flex column">
-        <ul>
-            <li><a href="/recipes.html">${meal.strCategory}</a></li>
-            <li><a href="/recipes.html">${meal.strArea}</a></li>
+        <ul class="chip">
+            <li><a href="/recipes.html?category=${recipe.strCategory}">${recipe.strCategory}</a></li>
+            <li><a href="/recipes.html">${recipe.strArea}</a></li>
         </ul>
     </div>
-    <h1>${meal.strMeal}</h1>
+    <h1>${recipe.strMeal}</h1>
     <div>
         <h2>Ingredients</h2>
         <ul>
-            <li>${meal.strMeasure1} + ${meal.strIngredient1}</li>
+            <li>${recipe.strMeasure1} ${recipe.strIngredient1}</li>
             // ETC? --------------------------------------------?
         </ul>
     </div>
     <div>
         <h2>Instructions</h2>
-        <p>${meal.strIntructions}</p>
+        <p>${recipe.strInstructions}</p>
     </div>
     `
 }

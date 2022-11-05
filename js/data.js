@@ -28,4 +28,9 @@ async function fetchSearchResult(search) {
     return fetchData("search.php?s=" + search)
 }
 
-export default {fetchCatgories, fetchCuisineList, fetchSearchResult}
+async function fetchRecipe(id) {
+    const data = await fetchData(`lookup.php?i=` + id);
+    return data.meals[0]
+}
+
+export default {fetchCatgories, fetchCuisineList, fetchSearchResult, fetchRecipe}
