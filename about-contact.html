@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="#" />
+    <meta name="author" content="Sophia Jean Sørenes">
+    <title>About | Good Food Mood</title>
+    <link href="css/styles.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="restrict">
+        <header>
+            <nav class="flex column">
+                <div>
+                    <a href="index.html"><img src="/images/Logo full - draft.png"
+                            alt="Navigate Home, Good Food Mood"></a>
+                </div>
+                <div><input type="text" id="search"></div>
+                <div>
+                    <ul class="flex">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="about-contact.html">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div>
+                <h1>About</h1>
+                <p></p>
+                <section class="flex column d-rows-child iPad-centered-twin">
+                    <h2>Contact Us</h2>
+                    <p>Hello! Thank you for your interest. Please use the form provided, and we will get
+                        back to you as soon as possible.</p>
+                    <div class="form-container">
+                        <form id="contact-form">
+                            <div class="flex column input-container">
+                                <label for="name">Name</label>
+                                <input type="text" id="name">
+                                <p class="form-error" id="name-error">Please enter your name</p>
+                            </div>
+                            <div class="flex column input-container">
+                                <label for="subject">Subject</label>
+                                <textarea name="" id="subject"></textarea>
+                                <p class="form-error" id="subject-error">Please add a subject containing at least 5
+                                    characters
+                                </p>
+                            </div>
+                            <div class="flex column input-container">
+                                <label for="email">Email</label>
+                                <input type="text" id="email">
+                                <p class="form-error" id="email-error">Please enter a valid email adress. Example:
+                                    name@email.com</p>
+                            </div>
+                            <div class="flex column input-container">
+                                <label for="message">Message</label>
+                                <input type="text" id="message">
+                                <p class="form-error" id="message-error">The message needs to
+                                    contain at least 25 characters</p>
+                            </div>
+                            <button id="submit-message">Send</button>
+                            <div id="error"></div>
+                        </form>
+                </section>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div social media>
+
+        </div>
+        <div bottom nav>
+
+        </div>
+    </footer>
+</body>
+<script src="./js/contact.js" type="module"></script>
