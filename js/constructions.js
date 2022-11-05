@@ -56,31 +56,31 @@ export function createRecipeDetails(recipe) {
     `
 }
 
-export function createResultByTime() {
-    const 
-    if (curHr < 12) {
-        console.log('good morning')
-        return `
-        <h2>Time for breakfast?</h2>
-        <div class="error"></div>
-        <div id="result">
-        </div>
-        `
-      } else if (curHr < 18) {
-        console.log('good afternoon')
-        return `
-        <h2>Planning dinner?</h2>
-        <div class="error"></div>
-        <div id="result">
-        </div>
-        `
-      } else {
-        console.log('good evening')
-        return `
-        <h2>Got a sweet tooth?</h2>
-        <div class="error"></div>
-        <div id="result">
-        </div>
-        `
-      }
-}
+// export function createResultByTime() {
+//     const 
+//     if (curHr < 12) {
+//         console.log('good morning')
+//         return `
+//         <h2>Time for breakfast?</h2>
+//         <div class="error"></div>
+//         <div id="result">
+//         </div>
+//         `
+//       } else if (curHr < 18) {
+//         console.log('good afternoon')
+//         return `
+//         <h2>Planning dinner?</h2>
+//         <div class="error"></div>
+//         <div id="result">
+//         </div>
+//         `
+//       } else {
+//         console.log('good evening')
+//         return `
+//         <h2>Got a sweet tooth?</h2>
+//         <div class="error"></div>
+//         <div id="result">
+//         </div>
+//         `
+//       }
+// }

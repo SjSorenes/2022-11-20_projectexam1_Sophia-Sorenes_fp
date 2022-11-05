@@ -2,7 +2,6 @@ import { createRecipeCard, populateRecipeList } from "./constructions.js";
 import api from "./data.js";
 
 const mealsList = await api.fetchSearchResult()
-console.log(mealsList);
 
 const searchInput = document.getElementById("search")
 

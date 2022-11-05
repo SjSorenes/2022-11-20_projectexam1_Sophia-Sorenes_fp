@@ -19,7 +19,7 @@ function validateForm(event) {
 }
 
 function checkLength (value, len) {
-    return (value.trim().length > len ? true : false)
+    return value.trim().length > len ? true : false
 }
 
 const validateEmail = (email) => {
@@ -31,5 +31,5 @@ const validateEmail = (email) => {
 form.addEventListener ("submit", validateForm);
 
 // function messageSentAlert() {
-//     alert("Thank you for contacting us. A copy of your message has been sent to your email.")
+//     alert("")
 // }

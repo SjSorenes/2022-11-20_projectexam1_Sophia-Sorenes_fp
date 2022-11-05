@@ -12,6 +12,16 @@ export function gatherIngredientsToArray(meals) {
     return returnList
 }
 
+export function getParamsFromUrl() {
+    return new URLSearchParams(document.location.search)
+}
+
+export function setParamToUrl(name, value) {
+    const params = getParamsFromUrl()
+    params.set(name, value)
+    window.location.search = params
+}
+
 // export function gatherSpecificIngredientsToArray(meals) {
 //     let returnIngredients = []
 //     for (var i in )
