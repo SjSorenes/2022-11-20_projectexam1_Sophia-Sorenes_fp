@@ -1,3 +1,5 @@
+import { formatText } from "./functions.js";
+
 export function createErrorMessage(error) {
     let errorDiv = document.querySelector(".error");
     errorDiv.innerHTML = "An error has occured: " + error;
@@ -13,11 +15,12 @@ export function createOption(value, name) {
 
 export function createRecipeCard(meal) {
     return `
-    <div class="card-container">
+    <div class="random-card bc-white">
         <a href="recipe.html?id=${meal.idMeal}">
             <div>
                 <h3>${meal.strMeal}</h3>
                 <img class="thumbnail" src=${meal.strMealThumb} alt="${meal.strMeal}">
+                <p>This is a ${meal.strArea} ${meal.strCategory} dish made with ${meal.strIngredient1}</p>
             </div>
         </a>
     </div>
@@ -32,21 +35,28 @@ export function populateRecipeList(recipes) {
     });
 }
 
+function createIngredientList(ingredients) {
+    let ingredientList = "";
+    ingredients.forEach((ingredient) => {
+        ingredientList += `<li>${ingredient.measure} ${ingredient.ingredient}</li>`
+    })
+    return ingredientList;
+}
+
 export function createRecipeDetails(recipe) {
     return `
     <img src=${recipe.strMealThumb}>
     <div class="flex column">
-        <ul class="chip">
-            <li><a href="/recipes.html?category=${recipe.strCategory}">${recipe.strCategory}</a></li>
-            <li><a href="/recipes.html">${recipe.strArea}</a></li>
+        <ul class="chip-list flex gap24">
+            <li class="chip"><a href="/recipes.html?category=${recipe.strCategory}">${recipe.strCategory}</a></li>
+            <li class="chip"><a href="/recipes.html?cuisine=${recipe.strArea}">${recipe.strArea}</a></li>
         </ul>
     </div>
     <h1>${recipe.strMeal}</h1>
     <div>
         <h2>Ingredients</h2>
         <ul>
-            <li>${recipe.strMeasure1} ${recipe.strIngredient1}</li>
-            // ETC? --------------------------------------------?
+            ${createIngredientList(recipe.ingredients)}
         </ul>
     </div>
     <div>
@@ -56,8 +66,47 @@ export function createRecipeDetails(recipe) {
     `
 }
 
+export function createRandomMealCard(meal) {
+    return `
+    <h2>Ever tried ${meal.strMeal}?</h2>
+    ${createLinkToMeal(meal.idMeal)}
+    <div class="flex gap5 card bc-white">
+        <img class="flex bigchild" src="${meal.strMealThumb}" alt="${meal.strMeal}">
+        <div class="flex column smallchild">
+            <p>This is a ${meal.strArea} ${meal.strCategory} dish made with ${meal.strIngredient1}</p>
+            <p>Get recipe >></p>
+        </div>
+    </div>
+    </a>
+    `
+}
+
+export function createLinkToMeal(id) {
+    return `
+    <a href="recipe.html?id=${id}">
+    `
+}
+
+function createCategoryCard(category) {
+    return `
+    <a class="card bc-white" href="recipes.html?category=${category.strCategory}">
+        <div>
+            <img src="${category.strCategoryThumb}" alt="${category.strCategory}">
+            <h3 class="hidden">${category.strCategory}</h3><p>${formatText(category.strCategoryDescription, 208)}</p>
+        </div>
+    </a>
+    `
+}
+
+export function populateCategories(categories, categorySection) {
+    categorySection.innerHTML = ""
+    categories.forEach(category => {
+        categorySection.innerHTML += createCategoryCard(category)
+    });
+}
+
 // export function createResultByTime() {
-//     const 
+//     const
 //     if (curHr < 12) {
 //         console.log('good morning')
 //         return `

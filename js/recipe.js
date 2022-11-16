@@ -1,9 +1,10 @@
 import { createRecipeDetails } from "./constructions.js";
 import api from "./data.js";
-import { getParamsFromUrl } from "./functions.js";
+import { addIngredientListToMeal, getParamsFromUrl } from "./functions.js";
 
 let id = getParamsFromUrl().get("id");
-const recipe = await api.fetchRecipe(id);
+const recipeResult = await api.fetchRecipe(id);
+const recipe = addIngredientListToMeal(recipeResult)
 console.log(recipe);
 
 let title = document.querySelector("title");

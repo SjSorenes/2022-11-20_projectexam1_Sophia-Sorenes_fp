@@ -20,6 +20,10 @@ let selectedCuisineFromUrl = getParamsFromUrl().get("cuisine") ?? "-1"
 
 let searchFromUrl = getParamsFromUrl().get("search") ?? ""
 
+const searchButton = document.getElementById("search-button")
+
+searchButton.addEventListener("click", search)
+
 categorySelect.innerHTML += "<option value=\"-1\">Category:</option>"
 
 categories.forEach(category => {
@@ -52,6 +56,11 @@ cuisineSelect.addEventListener("change", () => {
 
 searchInput.addEventListener("keyup", (e) => {
     if (e.key !== "Enter") return;
+    setParamToUrl("search", searchInput.value)
+    populateRecipeList(filterBySearch(filterByCatgory(filterByCuisine(finishedMealList, cuisineSelect.value), categorySelect.value), searchInput.value))
+})
+
+searchButton.addEventListener("click", (e) => {
     setParamToUrl("search", searchInput.value)
     populateRecipeList(filterBySearch(filterByCatgory(filterByCuisine(finishedMealList, cuisineSelect.value), categorySelect.value), searchInput.value))
 })

@@ -10,9 +10,87 @@ a {
 
 }
 
+.logo {
+    height: 60px;
+}
+
 .restrict {
-    width: (100vw-10px);
+    width: 100vw;
+}
+
+main {
+    padding: 20px;
+}
+
+.logo-container {
+    padding: 10px;    
+}
+
+.random-card {
+    padding: 5px 10px 0px;
+}
+
+/* .category-container {
+    margin: 20px 0;
+} */
+
+.random-card h2 {
+    margin: 5px 0 10px;
+}
+
+.card {
+    min-width: 75%;
     padding: 10px;
+}
+
+.first-word {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.searchbar {
+    position: sticky;
+    top: auto;
+}
+
+.search-input {
+    min-width: 70%;
+}
+
+.category-container {
+    overflow-y: scroll;
+}
+
+.category-header {
+    padding: 10px;
+    margin: 0px;
+    background-color: #fff;
+}
+
+.loader {
+    position: absolute;
+    top: 60vh;
+    left: 41vw;
+    border-top: 4px dotted #ffcc00;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite alternate;
+}
+
+@keyframes spin {
+    from {transform: rotate(380deg);}
+    to {transform: rotate(340deg);}
+}
+
+.loader-image {
+    padding: 5px;
+    animation: rotate 1s ease-in-out infinite alternate;
+}
+
+@keyframes rotate {
+    from {transform: rotate(340deg);}
+    to {transform: rotate(380deg);}    
 }
 
 img {
@@ -27,13 +105,63 @@ img {
     flex-direction: column;
 }
 
-nav ul {
+.center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.center {
+    justify-content: center;
+}
+
+.twin {
+    max-width: 49.2%;
+}
+
+.bigchild {
+    max-width: 66%;
+}
+
+.smallchild {
+    max-width: 33%;
+}
+
+nav ul, .chip {
     list-style: none;
+    padding: 0px;
+}
+
+.gap24 {
     gap: 24px;
 }
 
+.gap5 {
+    gap: 5px;
+}
+
+.padding5 {
+    padding: 5px 0;
+}
+
 nav ul a.active {
-    text-decoration: underline;
+    padding: 2px 0;
+    border-bottom: solid #fff 1px;
+}
+
+nav ul a.inactive:hover {
+    padding: 2px 0;
+}
+
+nav ul a {
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .form-error {
@@ -41,4 +169,50 @@ nav ul a.active {
     color: red;
     font-size: 14px;
     margin: 2px;
+}
+
+.bc-white {
+    background-color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+.button-main, .bc-green {
+    background-color: #1FC130;
+}
+
+.button-main, .button-secondary {
+    display: flex;
+    border-style: none;
+    padding: 5px 0px;
+    width: 50%;
+    justify-content: center;
+}
+
+.chip-list {
+    padding: 0px;
+}
+
+.chip {
+    padding: 5px 10px;
+    border: solid #000 1px;
+}
+
+.chip a {
+    width: 100%;
+}
+
+.button-secondary, .bc-blue {
+    background-color: #1F3770;
+}
+
+.bc-eggshell {
+    background-color: #e4d8ac;
+}
+
+.button-secondary, .button-main, .button-font {
+    color: #fff;
+
 }

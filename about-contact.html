@@ -8,25 +8,26 @@
     <meta name="author" content="Sophia Jean Sørenes">
     <title>About | Good Food Mood</title>
     <link href="css/styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
 </head>
 
 <body>
     <div class="restrict">
-        <header>
+        <header class="bc-white">
             <nav class="flex column">
-                <div>
-                    <a href="index.html"><img src="/images/Logo full - draft.png"
+                <div class="flex center">
+                    <a class="logo-container" href="index.html"><img class="logo" src="/images/Logo gfm.png"
                             alt="Navigate Home, Good Food Mood"></a>
                 </div>
-                <div><input type="text" id="search"></div>
-                <div>
-                    <ul class="flex">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="recipes.html">Recipes</a></li>
-                        <li><a href="about-contact.html">About</a></li>
+                <div class="bc-green">
+                    <ul class="flex space-around">
+                        <li><a class="inactive" href="index.html">Home</a></li>
+                        <li><a class="inactive" href="recipes.html">Recipes</a></li>
+                        <li><a class="active" href="about-contact.html">About</a></li>
                     </ul>
                 </div>
+                <div class="flex searchbar"><input class="search-input" type="text" id="search"><button class="button-secondary">Search</button></div>
             </nav>
         </header>
 
@@ -81,3 +82,5 @@
     </footer>
 </body>
 <script src="./js/contact.js" type="module"></script>
+<script src="./js/script.js" type="module"></script>
+</html>

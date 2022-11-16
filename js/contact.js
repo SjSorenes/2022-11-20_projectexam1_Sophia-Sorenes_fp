@@ -8,18 +8,24 @@ const emailError = document.querySelector("#email-error");
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#message-error");
 
-function validateForm(event) {
+function submitForm(event) {
     event.preventDefault();
 
-    // nameError.style.display = this.name.value.trim().length < 1 ? "block" : "none";
-    nameError.style.display = checkLength(firstName.value, 0) ? "none" : "block";
+    if(validate()) {
+        messageSentAlert()
+    }
+    else showError()
+}
+
+function showError() {
+    nameError.style.display = checkLength(firstName.value, 1) ? "none" : "block";
     subjectError.style.display = checkLength(subject.value, 5) ? "none" : "block";
     emailError.style.display = validateEmail(email.value) ? "none" : "block";
     messageError.style.display = checkLength(message.value, 25) ? "none" : "block";
 }
 
 function checkLength (value, len) {
-    return value.trim().length > len ? true : false
+    return value.trim().length >= len ? true : false
 }
 
 const validateEmail = (email) => {
@@ -28,8 +34,16 @@ const validateEmail = (email) => {
     return expressionMatches;
 }
 
-form.addEventListener ("submit", validateForm);
+function validate() {
+    if(!checkLength(firstName.value, 1)) return false 
+    if(!checkLength(subject.value, 5)) return false
+    if(!validateEmail(email.value)) return false
+    if(!checkLength(message.value, 25)) return false
+    return true
+}
 
-// function messageSentAlert() {
-//     alert("")
-// }
+form.addEventListener ("submit", submitForm);
+
+function messageSentAlert() {
+    alert("")
+}

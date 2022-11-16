@@ -8,38 +8,44 @@
     <meta name="author" content="Sophia Jean Sørenes">
     <title>Browse | Good Food Mood</title>
     <link href="css/styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
 </head>
 
 <body>
     <div class="restrict">
-        <header>
+        <header class="bc-white">
             <nav class="flex column">
-                <div>
-                    <a href="index.html"><img src="/images/Logo full - draft.png"
+                <div class="flex center">
+                    <a class="logo-container" href="index.html"><img class="logo" src="/images/Logo gfm.png"
                             alt="Navigate Home, Good Food Mood"></a>
                 </div>
-                <div><input type="text" id="search"></div>
-                <div>
-                    <ul class="flex">
+                <div class="bc-green">
+                    <ul class="flex space-around">
                         <li><a href="index.html">Home</a></li>
                         <li><a class="active" href="recipes.html">Recipes</a></li>
                         <li><a href="about-contact.html">About</a></li>
                     </ul>
                 </div>
+                <div class="flex searchbar"><input class="search-input" type="text" id="search"><button
+                        class="button-secondary" id="search-button">Search</button></div>
             </nav>
         </header>
 
-        <main>
+        <main class="bc-eggshell">
             <div filters>
                 <label for="categories"></label>
                 <select name="categories" id="category-select"></select>
                 <label for="cuisines"></label>
                 <select name="cuisines" id="cuisine-select"></select>
             </div>
-            <div number of recipes>
-            </div>
-            <div id="result">
+
+            <div class="flex column gap24" id="result">
+                <div class="loader">
+                    <div class="loader-image">
+                        <img src="./images/Pot-closed.png" alt="loading">
+                    </div>
+                </div>            
             </div>
 
         </main>
@@ -54,3 +60,5 @@
     </footer>
 </body>
 <script src="./js/recipes.js" type="module"></script>
+
+</html>

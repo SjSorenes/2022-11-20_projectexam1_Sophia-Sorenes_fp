@@ -12,7 +12,7 @@ export function filterBySearch(meals, search) {
     if (!search) return meals
     return meals.filter(meal => 
         meal.strMeal.toLowerCase().includes(search.toLowerCase()) ||
-        meal.ingredients.some(ingredient => ingredient && ingredient.toLowerCase().includes(search.toLowerCase()))
+        meal.ingredients.some(ingredient => ingredient.ingredient && ingredient.ingredient.toLowerCase().includes(search.toLowerCase()))
     )
 }
 

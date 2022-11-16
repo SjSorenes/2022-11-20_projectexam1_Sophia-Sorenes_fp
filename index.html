@@ -8,35 +8,52 @@
     <meta name="author" content="Sophia Jean Sørenes">
     <title>Home | Good Food Mood</title>
     <link href="css/styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
 </head>
 
 <body>
     <div class="restrict">
-        <header>
+        <header class="bc-white">
             <nav class="flex column">
-                <div>
-                    <a href="index.html"><img src="/images/Logo full - draft.png"
+                <div class="flex center">
+                    <a class="logo-container" href="index.html"><img class="logo" src="/images/Logo gfm.png"
                             alt="Navigate Home, Good Food Mood"></a>
                 </div>
-                <div><input type="text" id="search"></div>
-                <div>
-                    <ul class="flex">
+                <div class="bc-green">
+                    <ul class="flex space-around">
                         <li><a class="active" href="index.html">Home</a></li>
                         <li><a href="recipes.html">Recipes</a></li>
                         <li><a href="about-contact.html">About</a></li>
                     </ul>
                 </div>
+                <div class="flex searchbar"><input class="search-input" type="text" id="search"><button class="button-secondary" id="search-button">Search</button></div>
             </nav>
         </header>
-        <!-- <nav>
-            <input type="text" id="search">
-        </nav> -->
 
-        <main>
-            <section id="result-by-time">
+
+        <main class="flex column gap24 bc-eggshell">
+            <section>
+                <div id="random"></div>
+                <div class="flex center gap5 padding5">
+                    <button class="button-secondary" id="load-random-meal">Something else?</button>
+                </div>
+            </section>
+            <section>
+                <h2 class="">Browse by category</h2>
+                <div class="category-container flex gap24" id="categories">
+                </div>
+            </section>
+            <section id="weekly-vegetable">
+
             </section>
         </main>
+        <footer class="bc-blue flex">
+            <div>Social media?</div>
+        </footer>
     </div>
 </body>
 <script src="./js/script.js" type="module"></script>
+<script src="./js/main.js" type="module"></script>
+
+</html>

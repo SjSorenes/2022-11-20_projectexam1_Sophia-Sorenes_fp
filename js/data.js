@@ -18,6 +18,11 @@ async function fetchCatgories() {
     return data.categories
 }
 
+async function fetchRandomMeal() {
+    const data = await fetchData("random.php")
+    return data.meals[0]
+}
+
 async function fetchCuisineList() {
     const data = await fetchData("list.php?a=list")
     return data.meals
@@ -33,4 +38,4 @@ async function fetchRecipe(id) {
     return data.meals[0]
 }
 
-export default {fetchCatgories, fetchCuisineList, fetchSearchResult, fetchRecipe}
+export default {fetchCatgories, fetchCuisineList, fetchSearchResult, fetchRecipe, fetchRandomMeal}

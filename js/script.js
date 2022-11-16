@@ -1,19 +1,15 @@
-import { createRecipeCard, populateRecipeList } from "./constructions.js";
-import api from "./data.js";
-
-const mealsList = await api.fetchSearchResult()
-
 const searchInput = document.getElementById("search")
+const searchButton = document.getElementById("search-button")
 
 searchInput.addEventListener("keyup", search)
+searchButton.addEventListener("click", search)
 
 async function search(event) {
-    if (event.key !== 'Enter')
+    if (event.key !== 'Enter' && event.target.type !== "submit")
         return
-    const searchResult = await api.fetchSearchResult(searchInput.value)
-    populateRecipeList(searchResult.meals)
+    window.location.href = `/recipes.html?search=${searchInput.value}`
 } 
-populateRecipeList(mealsList.meals)
+
 
 
 
