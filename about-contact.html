@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body class="bc-eggshell">
     <div class="restrict">
         <header class="bc-white">
             <nav class="flex column">
@@ -20,22 +20,54 @@
                     <a class="logo-container" href="index.html"><img class="logo" src="/images/Logo gfm.png"
                             alt="Navigate Home, Good Food Mood"></a>
                 </div>
-                <div class="bc-green">
-                    <ul class="flex space-around">
-                        <li><a class="inactive" href="index.html">Home</a></li>
-                        <li><a class="inactive" href="recipes.html">Recipes</a></li>
+                <div class="desktop-center flex bc-green">
+                    <ul class=" desktop-restrict flex space-around restrict">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
                         <li><a class="active" href="about-contact.html">About</a></li>
                     </ul>
                 </div>
-                <div class="flex searchbar"><input class="search-input" type="text" id="search"><button class="button-secondary">Search</button></div>
+                <div class="desktop-flex desktop-center bc-eggshell">
+                    <div class="desktop-restrict flex searchbar">
+                        <input class="search-input" type="text" id="search">
+                        <button class="button-secondary" id="search-button">Search</button>
+                    </div>
+                </div>
             </nav>
         </header>
 
-        <main>
-            <div>
-                <h1>About</h1>
-                <p></p>
-                <section class="flex column d-rows-child iPad-centered-twin">
+        <div class="restrict bc-eggshell">
+            <main class="desktop-restrict desktop-flex auto-margin bc-white gap24">
+                <h1 class="hidden">About and contact</h1>
+                <section class="flex column desktop-grow-1">
+                    <h2>About</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                        deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+                        provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et
+                        dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+                        soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
+                        possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et
+                        aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+                        molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+                        voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                    <p>Duis mi justo, ullamcorper sed tellus ac, porta tempus erat. Vestibulum elementum ligula ac nulla
+                        luctus vehicula. Curabitur imperdiet dui a elit porttitor vehicula. Pellentesque suscipit, est
+                        sit amet viverra tincidunt, sem mauris facilisis metus, mattis lacinia sapien sem et purus.
+                        Etiam mollis erat vitae orci vestibulum sagittis. Phasellus ultricies ex et magna consequat, et
+                        venenatis arcu condimentum. Donec bibendum, nunc nec elementum congue, nisl orci maximus mauris,
+                        a rhoncus magna augue nec sem. Curabitur vel ornare ex, eu viverra leo. Nulla rutrum viverra
+                        interdum. Pellentesque in facilisis magna. Donec faucibus massa sit amet faucibus feugiat.
+                        Phasellus consequat vitae odio in tincidunt. Aliquam dictum elit convallis lacinia tristique.
+                        Quisque congue mattis nulla eget aliquam.</p>
+                </section>
+                <section class="flex column desktop-grow-2">
                     <h2>Contact Us</h2>
                     <p>Hello! Thank you for your interest. Please use the form provided, and we will get
                         back to you as soon as possible.</p>
@@ -65,22 +97,30 @@
                                 <p class="form-error" id="message-error">The message needs to
                                     contain at least 25 characters</p>
                             </div>
-                            <button id="submit-message">Send</button>
+                            <button class="button-secondary margin-top-5" id="submit-message">Send</button>
                             <div id="error"></div>
                         </form>
                 </section>
-            </div>
-        </main>
-    </div>
-    <footer>
-        <div social media>
-
+            </main>
         </div>
-        <div bottom nav>
-
+    </div>
+    <footer class="bc-green flex column desktop-center">
+        <div class="brand-container auto-margin">
+            <a class="footer-brand" href="index.html"><img src="./images/favicon.png" alt="Home"></a>
+        </div>
+        <nav class="auto-margin">
+            <ul class="flex gap24">
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="about-contact.html">About</a></li>
+                <li><a href="about-contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auto-margin">
+            <p>Copyright Good Food Mood 2022</p>
         </div>
     </footer>
 </body>
 <script src="./js/contact.js" type="module"></script>
 <script src="./js/script.js" type="module"></script>
+
 </html>

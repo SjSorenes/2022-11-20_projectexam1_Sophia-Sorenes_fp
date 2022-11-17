@@ -12,38 +12,53 @@
 
 </head>
 
-<body>
-    <div class="restrict">
-        <header class="bc-white">
-            <nav class="flex column">
-                <div class="flex center">
-                    <a class="logo-container" href="index.html"><img class="logo" src="/images/Logo gfm.png"
-                            alt="Navigate Home, Good Food Mood"></a>
+<body class="bc-eggshell">
+
+    <header class="bc-white">
+        <nav class="flex column">
+            <div class="flex center">
+                <a class="logo-container" href="index.html"><img class="logo" src="/images/Logo gfm.png"
+                        alt="Navigate Home, Good Food Mood"></a>
+            </div>
+            <div class="desktop-center flex bc-green">
+                <ul class=" desktop-restrict flex space-around restrict">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="about-contact.html">About</a></li>
+                </ul>
+            </div>
+            <div class="desktop-flex desktop-center bc-eggshell">
+                <div class="desktop-restrict flex searchbar">
+                    <input class="search-input" type="text" id="search">
+                    <button class="button-secondary" id="search-button">Search</button>
                 </div>
-                <div class="bc-green">
-                    <ul class="flex space-around">
-                        <li><a class="active" href="index.html">Home</a></li>
-                        <li><a href="recipes.html">Recipes</a></li>
-                        <li><a href="about-contact.html">About</a></li>
-                    </ul>
-                </div>
-                <div class="flex searchbar"><input class="search-input" type="text" id="search"><button class="button-secondary" id="search-button">Search</button></div>
-            </nav>
-        </header>
-        <main>
-            <div id="recipe-container">
-                
+            </div>
+        </nav>
+    </header>
+    <div class="restrict bc-eggshell">
+        <main class="desktop-restrict auto-margin flex column gap24 bc-eggshell">
+            <div class="" id="recipe-container">
+
             </div>
         </main>
     </div>
-    <footer>
-        <div social media>
-
+    <footer class="bc-green flex column desktop-center">
+        <div class="brand-container auto-margin">
+            <a class="footer-brand" href="index.html"><img src="./images/favicon.png" alt="Home"></a>
         </div>
-        <div bottom nav>
-
+        <nav class="auto-margin">
+            <ul class="flex gap24">
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="about-contact.html">About</a></li>
+                <li><a href="about-contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auto-margin">
+            <p>Copyright Good Food Mood 2022</p>
         </div>
     </footer>
 </body>
 <script src="./js/recipe.js" type="module"></script>
+<script src="./js/script.js" type="module"></script>
+
 </html>

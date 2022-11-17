@@ -15,7 +15,7 @@ export function createOption(value, name) {
 
 export function createRecipeCard(meal) {
     return `
-    <div class="random-card bc-white">
+    <div class="random-card desktop-card bc-white">
         <a href="recipe.html?id=${meal.idMeal}">
             <div>
                 <h3>${meal.strMeal}</h3>
@@ -45,23 +45,31 @@ function createIngredientList(ingredients) {
 
 export function createRecipeDetails(recipe) {
     return `
-    <img src=${recipe.strMealThumb}>
-    <div class="flex column">
-        <ul class="chip-list flex gap24">
-            <li class="chip"><a href="/recipes.html?category=${recipe.strCategory}">${recipe.strCategory}</a></li>
-            <li class="chip"><a href="/recipes.html?cuisine=${recipe.strArea}">${recipe.strArea}</a></li>
-        </ul>
-    </div>
-    <h1>${recipe.strMeal}</h1>
-    <div>
-        <h2>Ingredients</h2>
-        <ul>
-            ${createIngredientList(recipe.ingredients)}
-        </ul>
-    </div>
-    <div>
-        <h2>Instructions</h2>
-        <p>${recipe.strInstructions}</p>
+    <div class="card bc-white">
+        <div class="desktop-flex">
+            <div class="desktop-flex desktop-column-reverse desktop-grow-1">
+                <img src=${recipe.strMealThumb}>
+                <div class="flex column">
+                    <ul class="chip-list flex gap24">
+                        <li class="chip"><a href="/recipes.html?category=${recipe.strCategory}">${recipe.strCategory}</a></li>
+                        <li class="chip"><a href="/recipes.html?cuisine=${recipe.strArea}">${recipe.strArea}</a></li>
+                    </ul>
+                </div>
+                <h1>${recipe.strMeal}</h1>
+            </div>
+            <div class="desktop-flex desktop-center desktop-grow-1">
+                <div class="auto-margin">
+                    <h2>Ingredients</h2>
+                    <ul>
+                        ${createIngredientList(recipe.ingredients)}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>Instructions</h2>
+            <p>${recipe.strInstructions}</p>
+        </div>
     </div>
     `
 }
@@ -89,7 +97,7 @@ export function createLinkToMeal(id) {
 
 function createCategoryCard(category) {
     return `
-    <a class="card bc-white" href="recipes.html?category=${category.strCategory}">
+    <a class="card desktop-card bc-white" href="recipes.html?category=${category.strCategory}">
         <div>
             <img src="${category.strCategoryThumb}" alt="${category.strCategory}">
             <h3 class="hidden">${category.strCategory}</h3><p>${formatText(category.strCategoryDescription, 208)}</p>

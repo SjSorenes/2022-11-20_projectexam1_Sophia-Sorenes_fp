@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="restrict">
+    
         <header class="bc-white">
             <nav class="flex column">
                 <div class="flex center">
@@ -31,16 +31,16 @@
                         class="button-secondary" id="search-button">Search</button></div>
             </nav>
         </header>
-
-        <main class="bc-eggshell">
-            <div filters>
+    <div class="restrict bc-eggshell">
+        <main class="desktop-restrict auto-margin bc-eggshell">
+            <div class="filters">
                 <label for="categories"></label>
                 <select name="categories" id="category-select"></select>
                 <label for="cuisines"></label>
                 <select name="cuisines" id="cuisine-select"></select>
             </div>
 
-            <div class="flex column gap24" id="result">
+            <div class="flex desktop-card-container column desktop-row gap24" id="result">
                 <div class="loader">
                     <div class="loader-image">
                         <img src="./images/Pot-closed.png" alt="loading">
@@ -50,12 +50,19 @@
 
         </main>
     </div>
-    <footer>
-        <div social media>
-
+    <footer class="bc-green flex column desktop-center">
+        <div class="brand-container auto-margin">
+            <a class="footer-brand" href="index.html"><img src="./images/favicon.png" alt="Home"></a>
         </div>
-        <div bottom nav>
-
+        <nav class="auto-margin">
+            <ul class="flex gap24">
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="about-contact.html">About</a></li>
+                <li><a href="about-contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auto-margin">
+            <p>Copyright Good Food Mood 2022</p>
         </div>
     </footer>
 </body>
