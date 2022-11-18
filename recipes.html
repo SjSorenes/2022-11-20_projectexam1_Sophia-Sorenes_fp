@@ -20,10 +20,10 @@
                 <a class="padding-10" href="index.html"><img class="logo" src="/images/Logo gfm.png"
                         alt="Navigate Home, Good Food Mood"></a>
             </div>
-            <div class="bc-green">
-                <ul class="flex space-around">
+            <div class="desktop-center flex bc-green">
+                <ul class="desktop-restrict flex space-around restrict">
                     <li><a href="index.html">Home</a></li>
-                    <li><a class="active" href="recipes.html">Recipes</a></li>
+                    <li><a class="active" href="#">Recipes</a></li>
                     <li><a href="about-contact.html">About</a></li>
                 </ul>
             </div>
@@ -31,19 +31,21 @@
     </header>
     <div class="restrict bc-eggshell">
         <main class="desktop-restrict auto-margin bc-eggshell">
+            <h1 class="hidden">Browse recipes</h1>
             <div class="bc-blue desktop-flex desktop-center padding-10">
                 <div class="flex searchbar">
+                    <label class="hidden" for="search">Search</label>
                     <input class="search-input" type="text" id="search">
                     <button class="button-main" id="search-button">Search</button>
                 </div>
             </div>
             <div class="filters">
-                <label for="categories"></label>
+                <label class="hidden" for="category-select">Select category</label>
                 <select name="categories" id="category-select"></select>
-                <label for="cuisines"></label>
+                <label class="hidden" for="cuisine-select">Select cuisine</label>
                 <select name="cuisines" id="cuisine-select"></select>
             </div>
-
+            <h2 class="hidden">List of recipes</h2>
             <div class="flex center desktop-card-container column desktop-row" id="result">
                 <div class="flex desktop-card-container column desktop-row bc-white height-40vh width-100">
                     <div class="loader auto-margin">
