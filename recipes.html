@@ -12,23 +12,23 @@
 
 </head>
 
-<body>
-    
-        <header class="bc-white">
-            <nav class="flex column">
-                <div class="flex center">
-                    <a class="padding-10" href="index.html"><img class="logo" src="/images/Logo gfm.png"
-                            alt="Navigate Home, Good Food Mood"></a>
-                </div>
-                <div class="bc-green">
-                    <ul class="flex space-around">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a class="active" href="recipes.html">Recipes</a></li>
-                        <li><a href="about-contact.html">About</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+<body class="flex column bc-eggshell">
+
+    <header class="bc-white">
+        <nav class="flex column">
+            <div class="flex center">
+                <a class="padding-10" href="index.html"><img class="logo" src="/images/Logo gfm.png"
+                        alt="Navigate Home, Good Food Mood"></a>
+            </div>
+            <div class="bc-green">
+                <ul class="flex space-around">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="recipes.html">Recipes</a></li>
+                    <li><a href="about-contact.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <div class="restrict bc-eggshell">
         <main class="desktop-restrict auto-margin bc-eggshell">
             <div class="bc-blue desktop-flex desktop-center padding-10">
@@ -44,33 +44,36 @@
                 <select name="cuisines" id="cuisine-select"></select>
             </div>
 
-            <div class="flex desktop-card-container column desktop-row gap24" id="result">
-                <div class="loader">
-                    <div class="loader-image">
-                        <img src="./images/Pot-closed.png" alt="loading">
+            <div class="flex center desktop-card-container column desktop-row" id="result">
+                <div class="flex desktop-card-container column desktop-row bc-white height-40vh width-100">
+                    <div class="loader auto-margin">
+                        <div class="loader-image">
+                            <img src="./images/Pot-closed.png" alt="loading">
+                        </div>
                     </div>
-                </div>            
+                </div>
             </div>
 
         </main>
     </div>
+    <footer class="bc-green flex column desktop-center">
+        <div class="brand-container auto-margin">
+            <a class="footer-brand" href="index.html"><img src="./images/favicon.png" alt="Home"></a>
+        </div>
+        <nav class="auto-margin">
+            <ul class="flex gap24">
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="about-contact.html">About</a></li>
+                <li><a href="about-contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auto-margin">
+            <p>Copyright Good Food Mood 2022</p>
+        </div>
+    </footer>
 </body>
 <script src="./js/recipes.js" type="module"></script>
-<footer class="bc-green flex column desktop-center">
-    <div class="brand-container auto-margin">
-        <a class="footer-brand" href="index.html"><img src="./images/favicon.png" alt="Home"></a>
-    </div>
-    <nav class="auto-margin">
-        <ul class="flex gap24">
-            <li><a href="recipes.html">Recipes</a></li>
-            <li><a href="about-contact.html">About</a></li>
-            <li><a href="about-contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="auto-margin">
-        <p>Copyright Good Food Mood 2022</p>
-    </div>
-</footer>
+
 
 
 </html>
