@@ -48,7 +48,7 @@ export function createRecipeDetails(recipe) {
     <div class="card padding-10 bc-white">
         <div class="desktop-flex">
             <div class="desktop-flex desktop-column-reverse desktop-grow-1">
-                <img src=${recipe.strMealThumb}>
+                <img src=${recipe.strMealThumb} alt="${recipe.strMeal}">
                 <div class="flex column">
                     <ul class="chip-list flex gap24">
                         <li class="chip"><a href="/recipes.html?category=${recipe.strCategory}">${recipe.strCategory}</a></li>
