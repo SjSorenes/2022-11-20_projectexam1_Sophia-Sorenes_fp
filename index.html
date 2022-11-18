@@ -17,7 +17,7 @@
     <header class="bc-white">
         <nav class="flex column">
             <div class="flex center">
-                <a class="logo-container" href="index.html"><img class="logo" src="/images/Logo gfm.png"
+                <a class="padding-10" href="index.html"><img class="logo" src="/images/Logo gfm.png"
                         alt="Navigate Home, Good Food Mood"></a>
             </div>
             <div class="desktop-center flex bc-green">
@@ -27,20 +27,21 @@
                     <li><a href="about-contact.html">About</a></li>
                 </ul>
             </div>
-            <div class="desktop-flex desktop-center bc-eggshell">
-                <div class="desktop-restrict flex searchbar">
-                    <input class="search-input" type="text" id="search">
-                    <button class="button-secondary" id="search-button">Search</button>
-                </div>
-            </div>
+
         </nav>
     </header>
 
     <div class="restrict bc-eggshell">
         <main class="desktop-restrict auto-margin flex column gap24 bc-eggshell">
+            <div class="bc-blue desktop-flex desktop-center padding-10">
+                <div class="flex searchbar">
+                    <input class="search-input" type="text" id="search">
+                    <button class="button-main" id="search-button">Search</button>
+                </div>
+            </div>
             <section>
                 <div id="random"></div>
-                <div class="flex center gap5 padding5">
+                <div class="flex center gap5 padding-top-5">
                     <button class="button-secondary" id="load-random-meal">Something else?</button>
                 </div>
             </section>
@@ -53,23 +54,23 @@
 
             </section>
         </main>
-        <footer class="bc-green flex column desktop-center">
-            <div class="brand-container auto-margin">
-                <a class="footer-brand" href="index.html"><img src="./images/favicon.png" alt="Home"></a>
-            </div>
-            <nav class="auto-margin">
-                <ul class="flex gap24">
-                    <li><a href="recipes.html">Recipes</a></li>
-                    <li><a href="about-contact.html">About</a></li>
-                    <li><a href="about-contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="auto-margin">
-                <p>Copyright Good Food Mood 2022</p>
-            </div>
-        </footer>
     </div>
 </body>
+<footer class="bc-green flex column desktop-center">
+    <div class="brand-container auto-margin">
+        <a class="footer-brand" href="index.html"><img src="./images/favicon.png" alt="Home"></a>
+    </div>
+    <nav class="auto-margin">
+        <ul class="flex gap24">
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="about-contact.html">About</a></li>
+            <li><a href="about-contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="auto-margin">
+        <p>Copyright Good Food Mood 2022</p>
+    </div>
+</footer>
 <script src="./js/script.js" type="module"></script>
 <script src="./js/main.js" type="module"></script>
 

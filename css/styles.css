@@ -40,17 +40,11 @@ main {
 
 .card {
     min-width: 75%;
-    padding: 10px;
 }
 
 .first-word {
     font-weight: bold;
     text-transform: uppercase;
-}
-
-.searchbar {
-    position: sticky;
-    top: auto;
 }
 
 .search-input {
@@ -59,12 +53,6 @@ main {
 
 .category-container {
     overflow-y: scroll;
-}
-
-.category-header {
-    padding: 10px;
-    margin: 0px;
-    background-color: #fff;
 }
 
 .loader {
@@ -146,8 +134,12 @@ nav ul, .chip {
     gap: 5px;
 }
 
-.padding5 {
-    padding: 5px 0;
+.padding-top-5 {
+    padding-top: 5px;
+}
+
+.padding-10 {
+    padding: 10px;
 }
 
 .margin-top-5 {
@@ -213,7 +205,7 @@ nav ul a {
 }
 
 .bc-eggshell {
-    background-color: #e4d8ac;
+    background-color: #eadbe1;
 }
 
 .button-secondary, .button-main, .button-font {
@@ -222,7 +214,7 @@ nav ul a {
 }
     
 .filters {
-    margin-bottom: 24px;
+    margin: 24px 0px;
 }
 
 .auto-margin {

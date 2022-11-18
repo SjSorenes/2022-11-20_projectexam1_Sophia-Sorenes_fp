@@ -45,7 +45,7 @@ function createIngredientList(ingredients) {
 
 export function createRecipeDetails(recipe) {
     return `
-    <div class="card bc-white">
+    <div class="card padding-10 bc-white">
         <div class="desktop-flex">
             <div class="desktop-flex desktop-column-reverse desktop-grow-1">
                 <img src=${recipe.strMealThumb}>
@@ -78,7 +78,7 @@ export function createRandomMealCard(meal) {
     return `
     <h2>Ever tried ${meal.strMeal}?</h2>
     ${createLinkToMeal(meal.idMeal)}
-    <div class="flex gap5 card bc-white">
+    <div class="flex gap5 card padding-10 bc-white">
         <img class="flex bigchild" src="${meal.strMealThumb}" alt="${meal.strMeal}">
         <div class="flex column smallchild">
             <p>This is a ${meal.strArea} ${meal.strCategory} dish made with ${meal.strIngredient1}</p>
@@ -97,7 +97,7 @@ export function createLinkToMeal(id) {
 
 function createCategoryCard(category) {
     return `
-    <a class="card desktop-card bc-white" href="recipes.html?category=${category.strCategory}">
+    <a class="card padding-10 desktop-card bc-white" href="recipes.html?category=${category.strCategory}">
         <div>
             <img src="${category.strCategoryThumb}" alt="${category.strCategory}">
             <h3 class="hidden">${category.strCategory}</h3><p>${formatText(category.strCategoryDescription, 208)}</p>
