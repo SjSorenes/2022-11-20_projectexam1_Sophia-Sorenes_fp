@@ -99,7 +99,7 @@ function createCategoryCard(category) {
     return `
     <a class="card padding-10 desktop-card bc-white" href="recipes.html?category=${category.strCategory}">
         <div>
-            <img src="${category.strCategoryThumb}" alt="${category.strCategory}">
+            <img src="${category.strCategoryThumb}" alt="">
             <h3 class="hidden">${category.strCategory}</h3><p>${formatText(category.strCategoryDescription, 208)}</p>
         </div>
     </a>

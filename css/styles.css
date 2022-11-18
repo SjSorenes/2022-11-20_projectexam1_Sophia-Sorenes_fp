@@ -183,7 +183,7 @@ nav ul a {
 }
 
 .button-main, .bc-green {
-    background-color: #1FC130;
+    background-color: #0e7b19;
 }
 
 .button-main, .button-secondary {
@@ -215,7 +215,7 @@ nav ul a {
     background-color: #eadbe1;
 }
 
-.button-secondary, .button-main, .button-font {
+.button-secondary, .button-main, .button-font, footer p {
     color: #fff;
 
 }
